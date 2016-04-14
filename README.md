@@ -2,7 +2,7 @@
 
 This is my skeleton to start developing Web Applications with Golang.
 
-I use [echo](https://github.com/labstack/echo) and
+I use [echo](https://github.com/labstack/echo), HTTP server framework, and
 [go-bindata](https://github.com/jteeuwen/go-bindata) for embedding binary data
 in a Go program.
 
