@@ -1,0 +1,20 @@
+init_tasks:
+  - command: "go-bindata static/... templates/..."
+
+watchers:
+  - extension: go
+    excludes:
+      - bindata.go
+    tasks:
+      - command: "go test"
+
+  - extension: js
+    directory: static
+    tasks:
+      - command: "go-bindata static/... templates/..."
+
+  - extension: tmpl
+    directory: templates
+    tasks:
+      - command: "go-bindata static/... templates/..."
+      - command: "go test"

@@ -1,0 +1,15 @@
+{{ define "extra" }}
+  <!--link href="{{staticPath "static/css/app.css"}}" rel="stylesheet"-->
+{{ end }}
+
+{{ define "container" }}
+<div class="page-header">
+</div>
+{{ end }}
+
+{{ define "body" }}
+  {{ template "nav" .}}
+  <div class="container">
+    {{ template "container" .}}
+  </div>
+{{ end }}
