@@ -1,0 +1,19 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Default project in Go using Echo and Go-bindata">
+    <meta name="keywords" content="go, golang">
+    <meta name="author" content="Gabriel Monnerat">
+    <link rel="icon" href="{{staticPath "static/favicon.ico"}}">
+    <title>{{ .title }}</title>
+    <link href="{{staticPath "static/css/bootstrap.min.css"}}" rel="stylesheet">
+    <link href="{{staticPath "static/css/app.css"}}" rel="stylesheet">
+    <script src="{{staticPath "static/js/jquery-2.2.2.min.js"}}"></script>
+    <script src="{{staticPath "static/js/bootstrap.min.js"}}"></script>
+  </head>
+  <body>
+{{end}}
