@@ -44,9 +44,9 @@ func parseFiles(filenames ...string) (*template.Template, error) {
 func cacheTemplates(sets []string) error {
 	for _, set := range sets {
 		root, err := parseFiles(
-			"templates/navigation.tmpl",
-			"templates/base.tmpl",
+			"templates/header.tmpl",
 			"templates/footer.tmpl",
+			"templates/main.tmpl",
 			set,
 		)
 		if err != nil {
@@ -63,6 +63,6 @@ func executeTemplate(path string, params map[string]interface{}) (string, error)
 	if root == nil {
 		return "", errors.New("template: template not found")
 	}
-	root.ExecuteTemplate(&buf, "base", params)
+	root.ExecuteTemplate(&buf, "main", params)
 	return buf.String(), nil
 }
